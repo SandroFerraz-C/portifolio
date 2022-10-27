@@ -26,7 +26,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.coluna {
+.column {
     flex-basis: 49%;
 }
 
@@ -51,80 +51,91 @@ header .container {
     background-color: white;
 }
 
-header .linha {
+header .line {
     align-items: center;
 }
 
-header .coluna-esquerda {
+header .column-left {
     flex-basis: 30%;
 }
 
-header .coluna-direita {
+header .column-right {
     flex-basis: 60%;
     text-align: center;
 }
 
-header .coluna img {
+header .column img {
     max-width: 100%;
     color: var(--corTextoPrimaria);
 }
 
-header .coluna h1 {
+header .column h1 {
     font-size: 1.5rem;
 }
 
-header .coluna p {
+header .column p {
     font-size: 1rem;
     color: var(--corTextoPrimaria);
 }
 
-header .coluna ul {
+header .column ul {
     margin: 16px 0 0;
 }
 
-header .coluna ul li {
+header .column ul li {
     margin: 0 0 12px;
 }
 
-header .coluna ul li a {
+header .column ul li a {
     font-size: 1rem;
     color: var(--corTextoSecundaria);
 }
 
-main .coluna {
+main .column {
     padding: 20px;
 }
 
-main .coluna section {
+main .column section {
     border-bottom: 1px solid #d4e9ff;
     margin: 0 0 20px;
     min-height: 175px;
 }
 
-main .coluna section h2 {
+main .column section h2 {
     font-size: 1.3rem;
     margin: 0 0 15px;
 }
 
-main .coluna section p {
+main .column section p {
     font-size: 0.9rem;
     color: var(--corTextoPrimaria);
     line-height: 1.5;
 }
 
-main .coluna section ul li {
+main .column section ul li {
     margin: 0 0 12px;
 }
 
-main .coluna section ul li h3 {
+main .column section ul li h3 {
     font-size: 1.1rem;
 }
 
-main .coluna section ul li strong {
+main .column section ul li strong {
     font-size: 0.9rem;
     font-weight: 500;
     margin: 5px 0 10px;
     display: inline-block;
+}
+
+.experience li a{
+    color: black;
+    border: 1px solid black;
+    padding:2px;
+    font-size: 0.8rem; 
+}
+
+.experience li a:hover{
+    color: var(--corBackgroundPrimaria);
 }
 
 footer {
@@ -140,32 +151,33 @@ footer nav ul li a {
     color: #fff;
 }
 
-footer nav .info-contato li {
+footer nav .info-contact li {
     margin: 0 0 15px;
 }
 
-footer nav .redes-sociais {
+footer nav .social-networks {
     border-top: 1px solid rgb(255 255 155 / 20%);
     margin: 20px 0 50px;
     padding: 50px 0 0;
     text-align: center;
 }
 
-footer nav .redes-sociais li {
+footer nav .social-networks li {
     margin: 15px 28px;
     text-align: center;
     display: inline-block;
 }
 
-footer nav .redes-sociais li img {
+footer nav .social-networks li img {
     width: 40px;
 }
 
-.ativar-dark {
+.activate-dark {
     width: 100px;
     height: 50px;
     display: none;
 }
+
 
 header .container {
     position: relative;
@@ -193,63 +205,76 @@ label span {
     transition: all ease .7s;
 }
 
-.ativar-dark:checked~.dark-mode label {
+.activate-dark:checked~.dark-mode label {
     background-color: #d4e9ff;
 }
 
-.ativar-dark:checked~.dark-mode span {
+.activate-dark:checked~.dark-mode span {
     background-color: var(--corBackgroundSecundaria);
     transform: translateX(21px);
     transition: all ease .7s;
 }
 
-.ativar-dark:checked~.dark-mode {
+.activate-dark:checked~.dark-mode {
     --corBackgroundPrimaria: #000000;
     --corBackgroundSecundaria: #000000;
     --corTextoPrimaria: #fff;
     --corTextoSecundaria: #fff;
 }
 
-.ativar-dark:checked~.dark-mode header {
+.activate-dark:checked~.dark-mode header {
     background-color: var(--corBackgroundSecundaria);
 }
 
-.ativar-dark:checked~.dark-mode section li,
-.ativar-dark:checked~.dark-mode section h2 {
+.activate-dark:checked~.dark-mode section li,
+.activate-dark:checked~.dark-mode section h2 {
     color: var(--corTextoSecundaria);
 }
 
-.ativar-dark:checked~.dark-mode header .container {
+.activate-dark:checked~.dark-mode header .container {
     background-color: var(--corBackgroundDark);
 }
 
-.ativar-dark:checked~.dark-mode header .linha h1 {
+.activate-dark:checked~.dark-mode header .line h1 {
     color: var(--corTextoSecundaria);
 }
 
-.ativar-dark:checked~.dark-mode .container {
+.activate-dark:checked~.dark-mode .container {
     background-color: var(--corBackgroundDark);
 }
 
-.ativar-dark:checked~.dark-mode main {
+.activate-dark:checked~.dark-mode main {
     background-color: var(--corBackgroundSecundaria);
+}
+
+.activate-dark:checked~.dark-mode a {
+    
+        color: #fff;
+        border: 1px solid black;
+        padding:2px;
+        font-size: 0.8rem; 
+    
+}
+
+.activate-dark:checked~.dark-mode a:hover{
+    color: red;
 }
 
 @media only screen and (min-width: 768px) {
-    .linha {
+    .line {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: space-between;
     }
-    footer nav .redes-sociais {
+    footer nav .social-networks {
         display: flex;
         justify-content: center;
     }
     header {
         padding: 30px 0 0;
     }
-    header .coluna img {
+    header .column img {
         max-width: 250px;
         border-radius: 100%;
     }
@@ -260,11 +285,11 @@ label span {
         margin: 0 auto;
         padding: 30px;
     }
-    header .coluna ul {
+    header .column ul {
         margin: 16px 0 0;
         text-align: center;
     }
-    main .coluna section {
+    main .column section {
         border: 2px solid #000000;
         padding: 20px;
     }
@@ -293,7 +318,7 @@ label span {
             height: 0;
             border: 2px solid transparent;
         }
-        main .coluna section .topo-direita {
+        main .coluna section .topo-right {
             top: -2px;
             left: -2px;
             animation-name: aumentarLargura, aumentarAutura;
@@ -303,7 +328,7 @@ label span {
             border-top-color: #d4e9ff;
             border-right-color: #d4e9ff;
         }
-        main .coluna section .baixo-esquerda {
+        main .coluna section .baixo-left {
             bottom: -2px;
             right: -2px;
             animation-name: aumentarLargura, aumentarAutura;
@@ -313,10 +338,10 @@ label span {
             border-bottom-color: #d4e9ff;
             border-left-color: #d4e9ff;
         }*/
-    main .coluna {
+    main .column {
         padding: 0;
     }
-    footer nav .redes-sociais li {
+    footer nav .social-networks li {
         text-align: center;
         margin: 0 14px;
         display: initial;
@@ -324,7 +349,7 @@ label span {
 }
 
 @media only screen and (min-width: 791px) {
-    header .coluna-direita {
+    header .column-right {
         flex-basis: 70%;
     }
 }
