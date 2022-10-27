@@ -138,6 +138,10 @@ main .column section ul li strong {
     color: var(--corBackgroundPrimaria);
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
+
 footer {
     background-color: var(--corBackgroundSecundaria);
 }
